@@ -1,0 +1,2 @@
+# DSA-
+In this Repository you will find the useful code of Data structure and Algorithm with java as well as cpp. So we are trying to make this repository more interactive for folks who want to learn DSA without any thereotical old methods but with student-oriented aspects. in this repository we will provide as code with lots of comments as notes and well designed documentation for all of you. so that there is no need to take a note of every concept as you did in your college here you can practice a code with theory also.
