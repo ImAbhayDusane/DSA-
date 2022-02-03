@@ -1,0 +1,31 @@
+Best Approach to Recursion
+how to understand and approach a problem
+i. identify if you can break down the problem into smaller problem
+ii. form a recurrence relation if required
+iii. draw the recursive tree
+iv. About the tree
+    i.  See the flow of function that how they are getting in stack
+    ii. identify and focus on left tree calls and right tree calls
+    iii. Draw the tree and pointer again and again and use a debugger
+v. see how the value are return at each step ; see where the function call coming out ; at the end you will come out of main function
+
+*************
+variables
+i) Argument
+2) Return type
+3) Body of function
+
+Binary Search with Recursion
+i. Comparing --> O(1)
+ii. Dividing into two half
+-----------------------
+Recurrence Relation :-
+F(N) = O(1) + F(N/2)
+-----------------------
+
+Types of Recurrence Relation:
+i. Linear Recurrence Relation :- Fibonacci Numbers
+ii. Divide And Conquer Relation :- Binary Search
+
+important tips
+do not overthink
