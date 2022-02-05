@@ -1,0 +1,80 @@
+Types of Recursion
+1) linear
+f(N) = F(N - 1) + f(N - 2)
+
+2) Divide and Conquer
+F(N) = F(N / 2) + O(1)
+why do you write O(1) ?
+because we dont actually care about constant
+
+
+# Directly get final big Oh notation formula
+
+Divide and Conquer Recurence
+
+How to identify the equation is either divide and conquer or not ?\
+T(X) = a1 T (b1 x + Σ1(x)) + a2 T (b2 x + Σ2(x)) + ..... + ak T(bk + Σk(x)) + g(x)
+a1, a2 : Constant
+g(x) : just another function for all x>= Xo(x-naught)
+Xo(x-naught) : just another constant
+Example : -
+T(N) = T(N / 2) + C
+C : constant
+a1 = 1;
+b1 = 1/2;
+C(x) = 0;
+g(x) = C
+Example2 :
+f(n) = 9 f(n/3) + 4/3 f(5n / 6) + 4 n ^ 3
+a1 = 9
+b1 = 1/3
+
+a2 = 4/3
+b2 = 5/6
+
+g(x) =  4 n ^ 3
+
+f(n) = 2T(n/2) + (n -1)
+a1 = 2
+b1 = 1/2
+g(x) = n- 1
+
+## How to actually solve to get Complexity
+T(x) = Θ(x^p + x^p ∫ g(u) /( u ^ (p +1)) du ) .... here integration is from 1 to x
+Characteristics of p :-
+a1 b1 ^ p + a2 b2 ^ p + ..... = 1
+------------------
+k∑i+1 aibi^p = 1   ..... eq (1)
+------------------
+( g is function is a time complexity itself, so there is no hesitaion to remove less dominating term it should be totally fine here meanwhile it will be simplest form of function here)
+
+
+
+1) plug and clug
+   it is good method but we have a better options further
+2) master's theorem
+   not interested
+3) Akra Bazi Formula
+   Best method
+   from 1996
+   
+T(N) = 2T(N / 2) + (N - 1)
+a1 = 2
+b1 = 1/2
+g(x) = (N -1)
+so as according to equation number 1
+a1 * (b1^p) = 1
+from above p = 1
+so now put p = 1 in akra bazi formulae
+g(x) = x -1
+T(x) = Θ(x^1 + x^1 ∫ g(u) /( u - 1 / u ^ (1 +1)) du )
+     = Θ(x + x ∫ 1/u - 1/u^2 du) ... integration from 1 to x
+     = Θ(x + x [ 1∫x du/u - 1∫x du/u^2 ] )
+     = Θ(x + x [ (log u) + 1/u ]) .. integration from 1 to x  
+     = Θ(x + x [ x + x [ log x + 1/x - 1] )
+     = Θ(x + xlogx + 1 - x)
+     = Θ(xlogx + 1)
+     = Θ(xlogx) .. ignoring the less dominating term this is our time complexity
+     time complexity is Θ(xlogx)
+     for array of size n the merge sort complexity is O(NlogN) by akra bazi formula
+     
