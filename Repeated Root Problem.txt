@@ -1,0 +1,20 @@
+Equal roots :-
+f(n) = 2f(n - 1) + f( n - 2)
+f(n) = α^n
+α^n = 2α^(n-1) + α^(n-2)
+α^n - 2α^(n-1) - α^(n-2) = 0
+divide by α^(n-2)
+α^2 - 2α + 1 = 0  (α = 1 is double root)
+General Case :- if α is repeated r times then α^n, nα^n, n^2α^n, ....., n ^ r -1 α^n are all solutions
+hence i can take two root like 1,α^n
+
+1, n α^n =  1, n
+f(n) = c1 (1) ^ n + c2 n α^n
+     = c1 + c2 n
+f(0) = 0 and f(1) = 1
+f(1) = 1 + c1 + c2
+c1 = 0
+c2 = 1
+f(n) = n
+time complexity of above relation is f(n)
+
