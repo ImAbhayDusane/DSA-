@@ -1,0 +1,45 @@
+solving the linear recurence relation
+f(n) = f(n - 1) + f(n - 2)
+f(x) = a1 f(x - 1) + a2 f(x-2) + a3 f(x - 3) + ...... + an f(x - n) 
+f(n) = (i = 1) ∑ n ai f( n - i)
+ni is order of recurence
+
+two method to solve homogenous and non homogenous
+solutiion : -
+consider fibonacci number relation
+put f(n) = α^n for some constant α
+α^n = α^(n - 1) + α^(n - 2)
+α^n - α^(n - 1) - α^(n - 2) = 0
+dividing by α^(n - 2) on both side
+α^2 - α - 1 = 0 ... quadratic equation
+α = 1 +- √5 / 2   ....x = (-b ± √ (b² - 4ac) )/2a
+α1 = 1 + √5 / 2
+α2 = 1 - √5 / 2
+
+f(n) = c1 α1^n + c2 α2^n this is also an solution for fibonacci  series
+f(n) = f(n - 1) + f(n - 2)
+f(n) = c1 (1 + √5 / 2) ^ n + c2 (1 - √5 / 2) ^ n .... this is equation number 2
+
+### fact :- number of root you have = number of answer you have already
+here we already have 2  roots i.e. α1 and α2 so logically we should have 2 answers already and we did it
+i.e. f(0) = 0 and f(1) = 1
+evaluating f(0)
+f(0) = 0 = c1 + c2  -> c1 = - c2    ....... eq(3)
+f(1) = c1 (1 + √5 / 2)  + c2 (1 - √5 / 2) 
+from equation 3 
+1 = c1 (1 + √5 / 2) - c1(1 - √5 / 2)
+c1 = 1 / √5
+c2 = - 1 / √5
+putting this in equation number 2
+f(n) = 1 / √5(1 + √5 / 2)^n + 1 / √5(1 - √5 / 2)^n  this is formula for nth fibonacci number
+f(n) = 1 / √5((1 + √5 / 2)^n - (1 - √5 / 2)^n) as value of n is increased this will be closed to 0 hence (1 - √5 / 2)^n will be less dominating term here
+Time Complexity = O(1 + √5 / 2)^N
+for nth fibonacci number time complexity is equals to
+T(n) = O(1.6180)^n
+this is known as golden ration in mathematics
+thats why program was not giving the answers for 50 60 something like that
+because exponential time complexity is very bad
+
+
+
+
